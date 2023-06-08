@@ -17,6 +17,7 @@ public class PatientController : Controller
     }
 
     [HttpGet]
+    [Authorize]
 
     public async Task<ActionResult<List<Patients>>> getPatients([FromQuery] Application.List.Query query)
     {
@@ -24,6 +25,7 @@ public class PatientController : Controller
     }
 
     [HttpGet("{id}")]
+    [Authorize]
     public async Task<ActionResult<Patients>> getPatientsById(Guid id)
     {
 
