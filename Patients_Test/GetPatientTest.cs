@@ -13,12 +13,11 @@ namespace Patients_Test
     {
         private readonly Application.List.Handler _handler;
         private readonly IMediator _mediator;
-        private readonly IHostingEnvironment _hostingEnvironment;
         public GetPatientTest()
         {
             //Arrange
 
-            _handler = new Application.List.Handler(_mediator, _hostingEnvironment);
+            _handler = new Application.List.Handler(_mediator);
 
         }
         [Fact]
